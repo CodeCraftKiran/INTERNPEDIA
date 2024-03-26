@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input1 {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: pink;
+    color: blue;
+}
+
+h2 {
+    color: grey;
+    text-align: center;
+}
+
+.password {
+    color: red;
+}
