@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Convertor</title>
+        <link rel="stylesheet" href="./static/style.css">
+
+    </head>
+    <body>
+        <form method="post" target="{url_for('home')}">
+            <h1>Currency Convertor</h1>
+            {% if message %}
+                <p>PLEASE ENTER AMOUNT IN NUMBERS</p>
+            {% endif %}
+            <label>Base Currency</label>
+            <select name="base">
+                {% for code in data %}
+                    <option value="{{ code }}"> {{code}} </option>
+                {% endfor %}
+            </select>
+            <br>
+            <label>Amount to be converted</label>
+            <input type="text" name="base_amount">
+            <label>Target Currency</label>
+            <select name="target">
+                {% for code in data %}
+                    <option value="{{ code }}">{{code}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Convert</button>
+
+            {% if request.method == "POST" %}
+                <div>
+                    <h3>{{ base_code }} : {{ base_amount }}</h3>
+                    <h3>{{ target_code }} : {{ target_amount }}</h3>
+                </div>
+            {% endif %}
+        </form>
+    </body>
+</html>
